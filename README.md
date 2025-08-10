@@ -1,5 +1,30 @@
 # Miniature Octo Telegram
 
+## Starting Over
+
+To make a new GitHub-ready React app with Vite, the development environment needs Node, NPM, and Git.
+
+    npm create vite@latest my-react-app -- --template react
+    # If the development system has outdated libraries
+    # an older version of Vite may be installed
+    # npm create vite@6.1.0 my-react-app -- --template react
+
+Try it out locally.
+
+    cd my-react-app
+    npm install
+    npm run dev
+
+Additional libraries are required.
+
+    npm install react-router-dom react-router-bootstrap react-bootstrap bootstrap
+
+Its possible to register dependencies so they are automatically installed without having to specify them.
+
+    npm install react-router-dom react-router-bootstrap react-bootstrap bootstrap --save-dev
+
+## Original Process
+
 A poor [React App to GitHub Pages](https://github.com/gitname/react-gh-pages) tutorial was followed.
 
 Vite was used instead of create-react-app. An older Vite was used to work with the older version of NPM installed on the development system.
