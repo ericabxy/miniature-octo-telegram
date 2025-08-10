@@ -47,10 +47,10 @@ Additionally, using Bootstrap's Navbar requires importing a link wrapper.
 Render code for the router:
 
     <BrowserRouter>
-        
         <Routes>
-            <Route path="/" element={<h1>Home</h1>} />
-            <Route path="/about" element={<h1>About</h1>} />
+            <Route path="" element={<h1>Home</h1>} />
+            <Route path="about" element={<h1>About</h1>} />
+            <Route path="contact" element={<h1>Contact</h1>} />
         </Routes>
     </BrowserRouter>
 
@@ -59,11 +59,14 @@ Basic render code for the navigation bar:
     <Navbar>
         <Container>
             <Nav>
-                <LinkContainer to="/">
+                <LinkContainer to="">
                     <Nav.Link>Home</Nav.Link>
                 </LinkContainer>
-                <LinkContainer to="/about">
+                <LinkContainer to="about">
                     <Nav.Link>About</Nav.Link>
+                </LinkContainer>
+                <LinkContainer to="contact">
+                    <Nav.Link>Contact</Nav.Link>
                 </LinkContainer>
             </Nav>
         </Container>
