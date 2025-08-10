@@ -7,8 +7,10 @@ import Content from "./components/Content.jsx";
 import Footer from "./components/Footer.jsx";
 
 function App() {
+  // App is a router to serve content from a navbar selector
+
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.DEV ? '/' : '/miniature-octo-telegram/'}>
       <NavBar />
       <Content />
       <Footer />

@@ -7,6 +7,8 @@ import Contacts from "./Contacts.jsx";
 import Links from "./Links.jsx";
 
 function Content (props) {
+  // Routes to serve main content
+
   return (
     <Routes>
       <Route path="/" element={<Home />} />
