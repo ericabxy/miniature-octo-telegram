@@ -72,28 +72,28 @@ Basic render code for the navigation bar:
         </Container>
     </Navbar>
 
-## Starting Over
+## Deploying to Github Pages
 
-To make a new GitHub-ready React app with Vite, the development environment needs Node, NPM, and Git.
+Originally a "gh-pages" script was used, but its more complicated than necessary for GitHub. You can simply build with `npm run build` and tell GitHub to serve the "/dist" subfolder.
 
-    npm create vite@latest my-react-app -- --template react
-    # If the development system has outdated libraries
-    # an older version of Vite may be installed
-    # npm create vite@6.1.0 my-react-app -- --template react
+### Just-in-time Building
 
-Try it out locally.
+Rather than building in the development environment and pushing the "dist" folder to GitHub, you can employ a build script that builds the app right before publishing it.
 
-    cd my-react-app
+TODO: find a basic YAML file for this process.
+
+Add the following lines to ".gitignore" so Git doesn't unnecessarily push the local distribution folder in this case, as GitHub's continuous integration process will do that remotely.
+
+    dist/*
+
+It may be possible to maintain a "clean" development environment and Git source tree by not pushing any of the dependencies, and instead relying on the target environment to do run `npm install` to automatically fetch build dependencies. In this case add the following line(s) to ".gitignore".
+
+    node_modules/*
+
+Any dependencies accumulated by the experiment can be added to "package.json" by adding "--save-dev" to the install command as shown in Starting Over. Temporarily installing them for development should be as easy as:
+
     npm install
     npm run dev
-
-Additional libraries are required.
-
-    npm install react-router-dom react-router-bootstrap react-bootstrap bootstrap
-
-Its possible to register dependencies so they are automatically installed without having to specify them.
-
-    npm install react-router-dom react-router-bootstrap react-bootstrap bootstrap --save-dev
 
 ## Original Process
 
