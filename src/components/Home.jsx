@@ -1,15 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
+import Header from "./Header.jsx";
 
-function Home () {
-    const title = "Home";
-    const url = "/";
+function Home (props) {
+  const title = "Home";
+  const url = "/";
 
-    return (
-        <>
-            <h1>Home</h1>
-            <p>Content with a <a href="#linked">hyperlink</a>.</p>
-        </>
-    );
+  return (
+    <>
+      <Header title={title}>
+        Content with a <a href="#linked">hyperlink</a>.
+      </Header>
+    </>
+  );
 }
 
 export default Home;

@@ -1,12 +1,16 @@
 import React from "react";
 import ListGroup from "react-bootstrap/ListGroup";
+
 import ExtLink from "./ExtLink.jsx";
+import Header from "./Header.jsx";
 
 function Portfolio () {
-    const title = "Portfolio";
-    const url = "/portfolio";
+  const title = "Portfolio";
+  const url = "/portfolio";
 
-    return (
+  return (
+    <>
+      <Header title={title} />
       <ListGroup>
         <RetuxLevelItem />
         <GameplayVideosItem />
@@ -14,7 +18,8 @@ function Portfolio () {
         <GameStoreItem />
         <MerchStoreItem />
       </ListGroup>
-    );
+    </>
+  );
 }
 
 function RetuxLevelItem () {
