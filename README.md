@@ -1,5 +1,74 @@
 # Miniature Octo Telegram
 
+A web application sandbox using React and Vite, deployed with Github Pages.
+
+## Starting Over
+
+To create a brand new Vite React app:
+
+    npm create vite@latest my-brand-new-webapp -- --template react
+    # if the dev environment has outdated libs an older version of Vite may be installed
+    # npm create vite@6.1.0 my-brand-new-webapp -- --template react
+    cd my-brand-new-webapp
+    npm install
+    npm run dev
+
+## React Bootstrap
+
+React Bootstrap provides useful components for a responsive application.
+
+    npm install react-bootstrap bootstrap --save-dev
+
+## Routing and Linkage
+
+Use a router to switch pages or content when the user clicks a navigation link.
+
+    npm install react-router-dom react-router-bootstrap --save-dev
+
+### Basic Router Render Code
+
+Import BrowserRouter, NavLink, Routes, Route, and Navigate from "react-router-dom" for the routing essentials.
+
+    import {
+        BrowserRouter,
+        NavLink,
+        Routes,
+        Route,
+        Navigate,
+    } from 'react-router-dom';
+
+Additionally, using Bootstrap's Navbar requires importing a link wrapper.
+
+    import Container from 'react-bootstrap/Container';
+    import Nav from 'react-bootstrap/Nav';
+    import Navbar from 'react-bootstrap/Navbar';
+    import { LinkContainer } from 'react-router-bootstrap';
+
+Render code for the router:
+
+    <BrowserRouter>
+        
+        <Routes>
+            <Route path="/" element={<h1>Home</h1>} />
+            <Route path="/about" element={<h1>About</h1>} />
+        </Routes>
+    </BrowserRouter>
+
+Basic render code for the navigation bar:
+
+    <Navbar>
+        <Container>
+            <Nav>
+                <LinkContainer to="/">
+                    <Nav.Link>Home</Nav.Link>
+                </LinkContainer>
+                <LinkContainer to="/about">
+                    <Nav.Link>About</Nav.Link>
+                </LinkContainer>
+            </Nav>
+        </Container>
+    </Navbar>
+
 ## Starting Over
 
 To make a new GitHub-ready React app with Vite, the development environment needs Node, NPM, and Git.
