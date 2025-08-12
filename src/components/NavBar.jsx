@@ -1,5 +1,5 @@
 import React from "react";
-import { LinkContainer } from "react-router-bootstrap";
+import { LinkContainer } from 'react-router-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -10,12 +10,12 @@ function NavBar (props) {
   return (
     <Navbar expand="sm" className="bg-light">
       <Container className="container-fluid">
-        <BrandLink to="/">Eric Abides</BrandLink>
+        <BrandLink to="">Eric Abides</BrandLink>
         <Nav className="me-auto">
-          <NavLink to="/about">About</NavLink>
-          <NavLink to="/portfolio">Portfolio</NavLink>
-          <NavLink to="/contacts">Contacts</NavLink>
-          <NavLink to="/links">Links</NavLink>
+          <NavLink to="about">About</NavLink>
+          <NavLink to="portfolio">Portfolio</NavLink>
+          <NavLink to="contacts">Contacts</NavLink>
+          <NavLink to="links">Links</NavLink>
         </Nav>
       </Container>
     </Navbar>
