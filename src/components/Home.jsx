@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
-import Header from "./Header.jsx";
+import React from 'react';
+import Header from './Header.jsx';
 
 function Home (props) {
-  const title = "Home";
-  const url = "/";
+  const title = 'Home';
+  const url = '/';
 
   return (
     <>
