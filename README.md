@@ -78,9 +78,26 @@ Originally a "gh-pages" script was used, but its more complicated than necessary
 
 ### Just-in-time Building
 
-Rather than building in the development environment and pushing the "dist" folder to GitHub, you can employ a build script that builds the app right before publishing it.
+Rather than building in the development environment and pushing the "dist" folder to GitHub, you can employ a build script that builds the app right before publishing it. The deploy configuration script to trigger this is rather simple.
 
-TODO: find a basic YAML file for this process.
+    on:
+      push:
+        branches:
+          - "main" # change to the branch you wish to deploy from
+
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+
+    jobs:
+      deploy:
+        runs-on: ubuntu-latest
+        steps:
+        - id: build-publish
+          uses: bitovi/github-actions-react-to-github-pages@v1.2.4
+          with:
+            path: dist # change to your build folder
 
 Add the following lines to ".gitignore" so Git doesn't unnecessarily push the local distribution folder in this case, as GitHub's continuous integration process will do that remotely.
 
