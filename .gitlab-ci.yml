@@ -1,8 +1,0 @@
-# The Docker image that will be used to build your app
-image: ubuntu-latest
-pages:
-  script:
-  - npm run build
-  artifacts:
-    paths:
-    - dist
