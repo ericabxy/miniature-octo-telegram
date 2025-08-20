@@ -1,13 +1,12 @@
-import React from "react";
-import Header from "./Header.jsx";
+import React from 'react';
+import Header from './Header.jsx';
 
 function About () {
-  const title = "About";
-  const url = "about";
+  // About page
 
   return (
     <>
-      <Header title={title}>computer programmer and game designer</Header>
+      <Header title='About'>computer programmer and game designer</Header>
     </>
   )
 }
