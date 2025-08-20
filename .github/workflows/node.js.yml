@@ -34,7 +34,7 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - name: Upload static files as artifact
-        id: deployment
+        id: deploy
         uses: actions/upload-pages-artifact@v4
         with:
           path: dist/
