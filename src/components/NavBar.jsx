@@ -14,6 +14,7 @@ function NavBar (props) {
         <Nav className="me-auto">
           <NavLink to="about">About</NavLink>
           <NavLink to="portfolio">Portfolio</NavLink>
+          <NavLink to="canvas">Canvas</NavLink>
           <NavLink to="contacts">Contacts</NavLink>
           <NavLink to="links">Links</NavLink>
         </Nav>
